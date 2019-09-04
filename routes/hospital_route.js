@@ -20,22 +20,17 @@ router.get('/findbyPateient',SaveTokenSale_controller.findbyPateient);
 router.post('/dispensar',SaveTokenSale_controller.dispensar);
 
 //Find By year
-router.post('/year', SaveTokenSale_controller.findRecordByYear)
-
+router.post('/year', SaveTokenSale_controller.findRecordByYear);
 
 //Find by month
-
-router.post('/month', SaveTokenSale_controller.findRecordByMonth)
+router.post('/month', SaveTokenSale_controller.findRecordByMonth);
 
 
 //Find by between
-
-router.post('/between', SaveTokenSale_controller.FindByBetweenDate)
+router.post('/between', SaveTokenSale_controller.FindByBetweenDate);
 
 // Send Verification token for Save user role
 router.post('/accesspage',SaveUserRoll_controller.verifyToken,SaveUserRoll_controller.forloggedInAccess);
 
-
-
-
+ 
 module.exports = router 

@@ -157,12 +157,12 @@ const findRecordByYear = (req, res) => {
 //find by between date
 
     const FindByBetweenDate = (req,res)=>{
-    var startdate=moment(req.body.startdate).format('YYYY-MM-DD').toString();
-    var endDate=moment(req.body.endDate).format('YYYY-MM-DD').toString();
+    var FromDate=moment(req.body.FromDate).format('YYYY-MM-DD').toString();
+    var lastDate=moment(req.body.lastDate).format('YYYY-MM-DD').toString();
     
     tokenSale.aggregate( [{
         "$match": {
-            "enterdate": { "$gte": new Date(startdate), "$lte": new Date(endDate) }
+            "enterdate": { "$gte": new Date(FromDate), "$lte": new Date(lastDate) }
         },
             },{
                 $group : {
