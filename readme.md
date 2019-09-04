@@ -60,8 +60,7 @@ localhost:5000/api/dispensar
 		"userid":"5d6fbf7726b24836a0219890"
 }
 
-# Find By Date 
-
+ 
 # Find by month
 
 router.post('/month', SaveTokenSale_controller.findRecordByMonth)
