@@ -58,7 +58,7 @@ const findallrec = (req, res, next) =>{
 }
 
 
-//Find by Patien name
+//Find by Patient name
 
 const findbyPateient = (req, res, next) =>{
     tokenSale.find({ patientname: req.body.patientname }, function(err, byPatientName) {
@@ -155,7 +155,7 @@ const findRecordByYear = (req, res) => {
 }
 
 //find by between date
-// beytwwn date 
+
     const FindByBetweenDate = (req,res)=>{
     var startdate=moment(req.body.startdate).format('YYYY-MM-DD').toString();
     var endDate=moment(req.body.endDate).format('YYYY-MM-DD').toString();
